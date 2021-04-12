@@ -71,6 +71,21 @@ while True:
     j += 1
     if ws["J{}".format(j)].value == None:
         break
-
+for k in range(7,17):
+    ee = 0
+    if int(ws["Q{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["R{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["S{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["T{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["U{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["V{}".format(k)].value) < 0:
+        ee += 1
+    ws["W{}".format(k)].value = ee
+    
 wb.save("lotto_all.xlsx")
 wb.close()

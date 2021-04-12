@@ -16,7 +16,7 @@ ocha5 = ["U7", "U8", "U9", "U10", "U11", "U12", "U13", "U14", "U15", "U16"]
 ocha6 = ["V7", "V8", "V9", "V10", "V11", "V12", "V13", "V14", "V15", "V16"]
 ocha = [ocha1, ocha2, ocha3, ocha4, ocha5, ocha6]
 s = ["W1", "W2", "W3"]
-
+kk = ["W6","W7","W8","W9","W10","W11","W12","W13","W14","W15","W16"]
 while True:
     for i in range(6):
         전체숫자 = []
@@ -66,6 +66,22 @@ while True:
     j += 1
     if ws["J{}".format(j)].value == None:
         break
+
+for k in range(7,17):
+    ee = 0
+    if int(ws["Q{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["R{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["S{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["T{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["U{}".format(k)].value) < 0:
+        ee += 1
+    if int(ws["V{}".format(k)].value) < 0:
+        ee += 1
+    ws["W{}".format(k)].value = ee
 
 wb.save("lotto_line.xlsx")
 wb.close()
